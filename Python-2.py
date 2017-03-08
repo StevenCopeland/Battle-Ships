@@ -20,7 +20,7 @@ def random_row(board):
 
 def random_col(board):
     return randint(0, len(board[0]) - 1)
-    
+
 def random_row1(board):
     return randint(0, len(board) - 1)
 
@@ -51,7 +51,7 @@ ship_col2 = random_col1(board)
 for turn in range(21):
     guess_row = int(input("Guess Row:"))
     guess_col = int(input("Guess Col:"))
-    
+
     if (guess_row == ship_row) and (guess_col == ship_col):
         print ("Congratulations! You sunk my battleship!")
         board[guess_row][guess_col] = "S"
@@ -82,7 +82,7 @@ for turn in range(21):
         else:
             print ("You missed my battleship!")
             board[guess_row][guess_col] = "X"
-        
+
         if turn == 20:
             print ("Game Over. Thanks for playing")
             print (ship_row)
